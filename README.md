@@ -43,7 +43,7 @@ int main(int argc, char * argv[]) {
     block();
 }
 ```
-然后根据文章中的顺序，分别将其中`[self testBlockForHeapOfARC];`代码切换为：
+然后根据文章中的顺序，分别将其中的`[self testBlockForHeapOfARC];`代码切换为：
 ```
 [self testBlockForHeap0];
 ```
