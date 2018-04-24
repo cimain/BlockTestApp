@@ -108,7 +108,7 @@ main.m同用法1，另外，打开ViewController.m
 [self testTestCycleRetain];
 ```
 
-另外，关于强弱引用的宏定义已经写在MacroDefinition.h中（通过Prefix.h导入全局）。因为，可以改写成类似下面的格式：
+另外，关于强弱引用的宏定义已经写在MacroDefinition.h中（通过Prefix.h导入全局）。因此，可以改写成类似下面的格式：
 
 ```
 @weakify(self);
