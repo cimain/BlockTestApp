@@ -82,3 +82,40 @@ clang -rewrite-objc main.m
 
 可以发现同目录下面生成了main.cpp文件。
 
+### 用法3 - 测试Block的循环引用
+
+main.m同用法1，另外，打开ViewController.m
+
+```
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    [self testBlockForHeapOfARC];
+}
+
+-(void)testBlockForHeapOfARC{
+    int val =10;
+    typedef void (^blk_t)(void);
+    blk_t block = ^{
+        NSLog(@"blk0:%d",val);
+    };
+    block();
+}
+```
+修改其中`[self testBlockForHeapOfARC];`为
+
+```
+[self testTestCycleRetain];
+```
+
+另外，关于强弱引用的宏定义已经写在MacroDefinition.h中（通过Prefix.h导入全局）。因为，可以改写成类似下面的格式：
+
+```
+@weakify(self);
+[footerView setClickFooterBlock:^{
+        @strongify(self);
+        [self handleClickFooterActionWithSectionTag:section];
+}];
+```
+
+
