@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef void (^blk)(void);
 
 @interface TestCycleRetain : NSObject
+
+@property (nonatomic,copy) blk myblock;
 
 @end

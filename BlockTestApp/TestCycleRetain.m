@@ -6,10 +6,11 @@
 //  Copyright © 2018年 cimain. All rights reserved.
 //
 
+#define TestCycleRetainCase1 1
+
 #import "TestCycleRetain.h"
 
 @implementation TestCycleRetain
-
 
 - (void) dealloc {
     NSLog(@"no cycle retain");

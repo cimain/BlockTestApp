@@ -19,9 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self testBlockForHeapOfARC];
+    [self testTestCycleRetain];
 }
 
+#pragma mark - testBlockForHeapOfARC
 -(void)testBlockForHeapOfARC{
     int val =10;
     typedef void (^blk_t)(void);
@@ -88,6 +89,7 @@
 #pragma mark - testTestCycleRetain
 - (void)testTestCycleRetain{
     TestCycleRetain * obj = [[TestCycleRetain alloc] init];
+    obj.myblock();
     obj = nil;
 }
 
