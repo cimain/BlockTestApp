@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <Foundation/Foundation.h>
+#import "TestCycleRetain.h"
 
 @interface ViewController ()
 
@@ -82,6 +83,12 @@
     [array addObjectsFromArray:@[
          ^{NSLog(@"blk0:%d",val);},
          ^{NSLog(@"blk1:%d",val);}]];
+}
+
+#pragma mark - testTestCycleRetain
+- (void)testTestCycleRetain{
+    TestCycleRetain * obj = [[TestCycleRetain alloc] init];
+    obj = nil;
 }
 
 

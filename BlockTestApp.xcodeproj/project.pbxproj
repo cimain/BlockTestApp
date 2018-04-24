@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F71F2598208EBD8A00CD81E7 /* TestCycleRetain.m in Sources */ = {isa = PBXBuildFile; fileRef = F71F2597208EBD8A00CD81E7 /* TestCycleRetain.m */; };
 		F76BFEE8208D6C0900F5FCDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F76BFEE7208D6C0900F5FCDC /* AppDelegate.m */; };
 		F76BFEEB208D6C0900F5FCDC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76BFEEA208D6C0900F5FCDC /* ViewController.m */; };
 		F76BFEEE208D6C0900F5FCDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76BFEEC208D6C0900F5FCDC /* Main.storyboard */; };
@@ -35,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F71F2596208EBD8A00CD81E7 /* TestCycleRetain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCycleRetain.h; sourceTree = "<group>"; };
+		F71F2597208EBD8A00CD81E7 /* TestCycleRetain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCycleRetain.m; sourceTree = "<group>"; };
+		F71F2599208EBEED00CD81E7 /* BlockTestApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlockTestApp-Prefix.pch"; sourceTree = "<group>"; };
+		F71F259A208EBFD900CD81E7 /* MacroDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroDefinition.h; sourceTree = "<group>"; };
 		F76BFEE3208D6C0900F5FCDC /* BlockTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76BFEE6208D6C0900F5FCDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F76BFEE7208D6C0900F5FCDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,11 +110,15 @@
 				F76BFEE7208D6C0900F5FCDC /* AppDelegate.m */,
 				F76BFEE9208D6C0900F5FCDC /* ViewController.h */,
 				F76BFEEA208D6C0900F5FCDC /* ViewController.m */,
+				F71F2596208EBD8A00CD81E7 /* TestCycleRetain.h */,
+				F71F2597208EBD8A00CD81E7 /* TestCycleRetain.m */,
 				F76BFEEC208D6C0900F5FCDC /* Main.storyboard */,
 				F76BFEEF208D6C0900F5FCDC /* Assets.xcassets */,
 				F76BFEF1208D6C0900F5FCDC /* LaunchScreen.storyboard */,
 				F76BFEF4208D6C0900F5FCDC /* Info.plist */,
 				F76BFEF5208D6C0900F5FCDC /* main.m */,
+				F71F259A208EBFD900CD81E7 /* MacroDefinition.h */,
+				F71F2599208EBEED00CD81E7 /* BlockTestApp-Prefix.pch */,
 			);
 			path = BlockTestApp;
 			sourceTree = "<group>";
@@ -268,6 +277,7 @@
 				F76BFEEB208D6C0900F5FCDC /* ViewController.m in Sources */,
 				F76BFEF6208D6C0900F5FCDC /* main.m in Sources */,
 				F76BFEE8208D6C0900F5FCDC /* AppDelegate.m in Sources */,
+				F71F2598208EBD8A00CD81E7 /* TestCycleRetain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,9 +442,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9A57BVG7J;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BlockTestApp/BlockTestApp-Prefix.pch";
 				INFOPLIST_FILE = BlockTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.limbank.block222.BlockTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cimain.block222.BlockTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -446,9 +457,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9A57BVG7J;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/BlockTestApp/BlockTestApp-Prefix.pch";
 				INFOPLIST_FILE = BlockTestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.limbank.block222.BlockTestApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cimain.block222.BlockTestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
